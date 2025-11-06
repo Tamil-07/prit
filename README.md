@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeSource - Source Any Product</title>
+    
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Import Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Apply the Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Simple scrolling animation for the activity feed */
+        @keyframes scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .animate-scroll {
+            /* Adjust duration based on list length */
+            animation: scroll 25s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- 
+      HEADER
+      - Logo
+      - Navigation links
+      - Login & CTA
+      - Mobile-responsive burger menu
+    -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="#" class="text-3xl font-bold text-blue-700">
+                    VibeSource
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#how-it-works" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">How It Works</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Suppliers</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-700 font-medium transition duration-300">Login</a>
+                    <a href="#cta-block" class="ml-4 px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Burger Button -->
+                <div class="md:hidden">
+                    <button class="text-gray-700 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 
+          HERO SECTION
+          - Headline, Subheadline
+          - Search Bar
+          - CTA Button
+          - Illustration Area (Responsive)
+        -->
+        <section class="bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Hero Text Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                        Source Any Product from <span class="text-blue-600">Verified Suppliers</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600">
+                        Fast, transparent, and data-backed sourcing for your business.
+                    </p>
+
+                    <!-- Search Bar -->
+                    <div class="mt-8 max-w-lg mx-auto lg:mx-0">
+                        <form class="flex w-full bg-white shadow-lg rounded-lg overflow-hidden border border-gray-200">
+                            <input type="text" placeholder="What product are you looking for?" class="w-full px-6 py-4 text-gray-700 focus:outline-none">
+                            <button class="bg-blue-600 text-white px-6 py-4 hover:bg-blue-700 transition duration-300">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="mt-8 flex justify-center lg:justify-start">
+                        <a href="#cta-block" class="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition duration-300 text-lg">
+                            Request a Quote
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Illustration Area -->
+                <div class="hidden lg:flex items-center justify-center">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 w-full h-[500px] rounded-2xl shadow-xl flex items-center justify-center p-8">
+                         <!-- Placeholder Icon: A simple abstract SVG representing network/connection -->
+                         <svg class="w-3/4 h-3/4 text-blue-400" fill="none" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 10C72.0914 10 90 27.9086 90 50C90 72.0914 72.0914 90 50 90C27.9086 90 10 72.0914 10 50C10 27.9086 27.9086 10 50 10Z" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+                            <path d="M50 20C66.5685 20 80 33.4315 80 50C80 66.5685 66.5685 80 50 80C33.4315 80 20 66.5685 20 50C20 33.4315 33.4315 20 50 20Z" stroke="currentColor" stroke-width="2" opacity="0.4"/>
+                            <path d="M50 30C61.0457 30 70 38.9543 70 50C70 61.0457 61.0457 70 50 70C38.9543 70 30 61.0457 30 50C30 38.9543 38.9543 30 50 30Z" stroke="currentColor" stroke-width="2" class="text-blue-600"/>
+                            <circle cx="50" cy="50" r="5" fill="currentColor" class="text-blue-700"/>
+                            <circle cx="50" cy="20" r="3" fill="currentColor" class="text-blue-600"/>
+                            <circle cx="80" cy="50" r="3" fill="currentColor" class="text-blue-600"/>
+                            <circle cx="50" cy="80" r="3" fill="currentColor" class="text-blue-600"/>
+                            <circle cx="20" cy="50" r="3" fill="currentColor" class="text-blue-600"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          TRUST BENEFITS
+          - Simple 3-column layout with icons
+        -->
+        <section class="bg-white py-12 border-b border-gray-100">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="text-green-500">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="text-lg font-medium text-gray-700">Verified Suppliers</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="text-blue-500">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.379-8.379-2.828-2.828z"></path></svg>
+                        </span>
+                        <span class="text-lg font-medium text-gray-700">Fast Quotes</span>
+                    </div>
+                    <div class="flex items-center justify-center space-x-3">
+                        <span class="text-purple-500">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        <span class="text-lg font-medium text-gray-700">Transparent Process</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          TRENDING CATEGORIES
+          - Responsive grid of category links
+        -->
+        <section class="bg-gray-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    Trending Categories
+                </h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <!-- Category Item -->
+                    <a href="#" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                        <h3 class="font-semibold text-center text-gray-800 text-lg">Steel</h3>
+                    </a>
+                    <!-- Category Item -->
+                    <a href="#" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                        <h3 class="font-semibold text-center text-gray-800 text-lg">Plastics</h3>
+                    </a>
+                    <!-- Category Item -->
+                    <a href="#" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                        <h3 class="font-semibold text-center text-gray-800 text-lg">Machinery</h3>
+                    </a>
+                    <!-- Category Item -->
+                    <a href="#" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                        <h3 class="font-semibold text-center text-gray-800 text-lg">Chemicals</h3>
+                    </a>
+                    <!-- Category Item -->
+                    <a href="#" class="block bg-white p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                        <h3 class="font-semibold text-center text-gray-800 text-lg">Packaging</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          HOW IT WORKS
+          - 3-step process
+        -->
+        <section id="how-it-works" class="bg-white py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    How It Works
+                </h2>
+                <!-- Steps with connecting line -->
+                <div class="relative grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Dotted line for desktop -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-px -mt-8">
+                        <svg class="w-full" height="2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="text-gray-300" d="M0 1H1000" stroke="currentColor" stroke-width="2" stroke-dasharray="8 8"/>
+                        </svg>
+                    </div>
+                    
+                    <!-- Step 1 -->
+                    <div class="relative p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-700 font-bold text-2xl rounded-full mx-auto mb-4 border-4 border-white z-10">
+                            1
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Tell Us What You Need</h3>
+                        <p class="text-gray-600">Submit your product requirements in minutes.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-700 font-bold text-2xl rounded-full mx-auto mb-4 border-4 border-white z-10">
+                            2
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">We Match You</h3>
+                        <p class="text-gray-600">Our tech matches you with verified suppliers.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative p-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-700 font-bold text-2xl rounded-full mx-auto mb-4 border-4 border-white z-10">
+                            3
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">You Choose the Best</h3>
+                        <p class="text-gray-600">Receive quotes and choose your partner.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          ACTIVITY FEED
+          - Scrolling list to give a live feel
+        -->
+        <section class="bg-gray-50 py-16">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+                    Live Sourcing Activity
+                </h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 h-64 overflow-hidden relative">
+                    <!-- This inner div will be animated -->
+                    <div class="animate-scroll">
+                        <!-- List is duplicated for seamless scrolling -->
+                        <ul class="space-y-4">
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Chennai</span> just requested quotes for <span class="font-medium">Stainless Steel</span>.</li>
+                            <li class="p-3 bg-green-50 rounded-lg text-gray-700">New supplier from <span class="font-medium text-green-600">Vietnam</span> (Machinery) just <span class="font-medium">Verified</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Pune</span> received 5 quotes for <span class="font-medium">LDPE Granules</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Purchase order for <span class="font-medium">100 tons of Hot Rolled Coil</span> just completed.</li>
+                            <li class="p-3 bg-green-50 rounded-lg text-gray-700">New supplier from <span class="font-medium text-green-600">Turkey</span> (Textiles) just <span class="font-medium">Verified</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Mumbai</span> is sourcing <span class="font-medium">Packaging Boxes</span>.</li>
+                        </ul>
+                        <!-- Duplicate for seamless scroll -->
+                        <ul class="space-y-4 mt-4">
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Chennai</span> just requested quotes for <span class="font-medium">Stainless Steel</span>.</li>
+                            <li class="p-3 bg-green-50 rounded-lg text-gray-700">New supplier from <span class="font-medium text-green-600">Vietnam</span> (Machinery) just <span class="font-medium">Verified</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Pune</span> received 5 quotes for <span class="font-medium">LDPE Granules</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Purchase order for <span class="font-medium">100 tons of Hot Rolled Coil</span> just completed.</li>
+                            <li class="p-3 bg-green-50 rounded-lg text-gray-700">New supplier from <span class="font-medium text-green-600">Turkey</span> (Textiles) just <span class="font-medium">Verified</span>.</li>
+                            <li class="p-3 bg-gray-100 rounded-lg text-gray-700">Buyer from <span class="font-medium text-blue-600">Mumbai</span> is sourcing <span class="font-medium">Packaging Boxes</span>.</li>
+                        </ul>
+                    </div>
+                    <!-- Fades for top and bottom -->
+                    <div class="absolute top-0 left-0 w-full h-8 bg-gradient-to-b from-white to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-white to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          CTA BLOCK
+          - Final call to action
+        -->
+        <section id="cta-block" class="bg-white py-16">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-r from-blue-700 to-blue-800 text-white rounded-2xl shadow-xl p-12 md:p-16">
+                    <div class="flex flex-col lg:flex-row justify-between items-center gap-8">
+                        <h2 class="text-3xl md:text-4xl font-bold text-center lg:text-left">
+                            Ready to Source Smarter?
+                        </h2>
+                        <a href="#" class="flex-shrink-0 px-8 py-4 bg-white text-blue-700 font-medium rounded-lg shadow-md hover:bg-gray-100 transition duration-300 text-lg">
+                            Request a Quote Today
+                        </a>
+                    </div>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <!-- 
+      FOOTER
+      - Links and copyright
+    -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Column 1 (Logo & About) -->
+                <div class="col-span-2 lg:col-span-1">
+                    <h3 class="text-xl font-bold text-white mb-4">VibeSource</h3>
+                    <p class="text-sm">Fast, transparent, and data-backed sourcing.</p>
+                </div>
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Company</h3>
+                    <a href="#" class="block hover:text-white transition">About Us</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Careers</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Contact</a>
+                </div>
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Categories</h3>
+                    <a href="#" class="block hover:text-white transition">Steel</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Plastics</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Machinery</a>
+                    <a href="#" class="block hover:text-white transition mt-2">View All</a>
+                </div>
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Suppliers</h3>
+                    <a href="#" class="block hover:text-white transition">Become a Supplier</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Supplier Hub</a>
+                </div>
+                <!-- Column 5 -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Legal</h3>
+                    <a href="#" class="block hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="block hover:text-white transition mt-2">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm">
+                &copy; 2025 VibeSource. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
